@@ -36,8 +36,8 @@ public class FinishExamAction extends ActionSupport implements SessionAware {
     @Override
     public void validate() {
         for (int i = 0; i < examQuestionsStudent.size(); i++) {
-            String studentAnswer = examQuestionsStudent.get(i).getAnswer();
-            String correctAnswer = examQuestionsCorectAnswers.get(i).getAnswer();
+            String studentAnswer = examQuestionsStudent.get(i).getAnswer().trim().toLowerCase();
+            String correctAnswer = examQuestionsCorectAnswers.get(i).getAnswer().trim().toLowerCase();
             String fieldName = "examQuestionsStudent[" + i + "].answer";
             if (StringUtils.isEmpty(studentAnswer) || !studentAnswer.equals(correctAnswer)) {
                 addFieldError(fieldName, "The correct answer is " + correctAnswer);

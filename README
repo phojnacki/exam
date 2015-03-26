@@ -1,1 +1,14 @@
-Starter multi-module project with web and ejb module (simple exam application).
+Starter multi-module project with web and ejb module (simple exam taking application).
+
+Please build it with
+
+    mvn clean install
+
+in root directory and deploy two following artifacts:
+
+    exam-business-logic-ear/target/examBusinessLogicEar.ear
+    exam-web/target/examWeb.war
+
+You can find a concept of this example application on:
+
+http://en.mobilne.org/2015/03/multi-module-jee-web-application.html

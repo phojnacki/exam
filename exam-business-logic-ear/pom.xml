@@ -16,7 +16,7 @@
     <packaging>ear</packaging>
 
     <build>
-        <finalName>examBusinessLogic</finalName>
+        <finalName>examBusinessLogicEar</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

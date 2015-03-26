@@ -34,7 +34,7 @@ public class AdministrateAnswersAction implements SessionAware {
     private List<ExamQuestion> createExamQuestions() throws NamingException {
         ExamQuestionsService examQuestionsService = null;
         InitialContext ic = new InitialContext();
-        examQuestionsService = (ExamQuestionsService) ic.lookup("java:global/examBusinessLogic/examBusinessLogic/ExamQuestionsServiceBean");
+        examQuestionsService = (ExamQuestionsService) ic.lookup("java:global/examBusinessLogicEar/examBusinessLogic/ExamQuestionsServiceBean");
         return examQuestionsService.getExamQuestions();
     }
 

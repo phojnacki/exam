@@ -6,4 +6,5 @@ public interface ExamQuestionsService {
 
     List<ExamQuestion> getExamQuestions();
 
+    List<ExamQuestion> getWithoutAnswer(List<ExamQuestion> examQuestions);
 }
