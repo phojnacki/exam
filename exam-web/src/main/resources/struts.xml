@@ -2,5 +2,6 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts
 Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-
+    <constant name="struts.ui.theme" value="css_xhtml"/>
+    <constant name="struts.mapper.action.prefix.enabled" value="true"/>
 </struts>

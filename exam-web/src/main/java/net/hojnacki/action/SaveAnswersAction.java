@@ -8,7 +8,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.List;
 import java.util.Map;
 
-@Result(name = "success", location = "index.jsp")
+@Result(name = "success", location = "/", type = "redirect")
 @Action("saveAnswers")
 public class SaveAnswersAction implements SessionAware {
 

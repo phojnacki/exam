@@ -4,12 +4,18 @@
 <html>
 <head>
     <title>Welcome to exam starter</title>
+    <link href="${pageContext.request.contextPath}/css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<h1>Welcome to exam starter</h1>
+<div id="wrapper">
+    <s:form method="POST">
+        <fieldset>
+            <legend>Welcome to exam starter</legend>
+            <s:submit action="administrateAnswers" value="Administrate answers"/>
+            <s:submit action="takeAnExam" value="Take an exam"/>
+        </fieldset>
+    </s:form>
+</div>
 
-<h3><a href="<s:url action="administrateAnswers"/>">Administrate answers</a></h3>
-
-<h3><a href="<s:url action="takeAnExam"/>">Take an exam</a></h3>
 </body>
 </html>

@@ -20,20 +20,22 @@ public class AdministrateAnswersAction implements SessionAware {
 
     public List<ExamQuestion> examQuestions;
 
-    public String execute() {
+    public String execute() throws NamingException {
         if (examQuestions != null) {
             return "success";
         }
-
-        ExamQuestionsService examQuestionsService = null;
-        try {
-            InitialContext ic = new InitialContext();
-            examQuestionsService = (ExamQuestionsService) ic.lookup("java:global/examBusinessLogic.ear/exam-business-logic-1.0-SNAPSHOT/ExamQuestionsServiceBean");
-        } catch (NamingException e) {
-            return "error";
+        examQuestions = createExamQuestions();
+        if (examQuestions != null) {
+            return "success";
         }
-        examQuestions = examQuestionsService.getExamQuestions();
-        return "success";
+        return "error";
+    }
+
+    private List<ExamQuestion> createExamQuestions() throws NamingException {
+        ExamQuestionsService examQuestionsService = null;
+        InitialContext ic = new InitialContext();
+        examQuestionsService = (ExamQuestionsService) ic.lookup("java:global/examBusinessLogic.ear/exam-business-logic-1.0-SNAPSHOT/ExamQuestionsServiceBean");
+        return examQuestionsService.getExamQuestions();
     }
 
 
