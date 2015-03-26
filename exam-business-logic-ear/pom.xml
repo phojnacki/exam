@@ -16,7 +16,7 @@
     <packaging>ear</packaging>
 
     <build>
-	<finalName>examBusinessLogic.ear</finalName>
+        <finalName>examBusinessLogic</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -32,6 +32,7 @@
                         <ejbModule>
                             <groupId>net.hojnacki.service</groupId>
                             <artifactId>exam-business-logic</artifactId>
+                            <bundleFileName>examBusinessLogic</bundleFileName>
                         </ejbModule>
                     </modules>
                 </configuration>

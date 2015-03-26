@@ -13,6 +13,8 @@
             <s:submit value="Back"/>
         </fieldset>
     </s:form>
+    Exception Name: <s:property value="exception"/><br/>
+    Exception Details: <s:property value="exceptionStack"/>
 </div>
 </body>
 </html>
