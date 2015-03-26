@@ -1,11 +1,5 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: dell
-  Date: 25.03.15
-  Time: 16:18
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,10 +8,13 @@
 </head>
 <body>
 
-<h1>Administrate answers</h1><br/><br/>
-<s:form>
-    <s:textfield label="What's the version of the latest Struts framework?" name="questionVersionOfStruts"
-                 value="2.3.20"/>
+<h1>Administrate answers</h1>
+<s:form action="saveAnswers" method="POST">
+    <s:iterator value="examQuestions" status="stat">
+        <s:textfield name="examQuestions[%{#stat.index}].answer" label="%{question}" value="%{answer}"/>
+        <s:hidden name="examQuestions[%{#stat.index}].question" value="%{question}"/>
+    </s:iterator>
+    <s:submit value="Save"/>
 </s:form>
 
 </body>
