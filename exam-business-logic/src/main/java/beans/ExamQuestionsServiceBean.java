@@ -8,6 +8,7 @@ import java.util.List;
 @Stateless(mappedName = "ExamQuestionsService")
 @Remote(ExamQuestionsService.class)
 public class ExamQuestionsServiceBean implements ExamQuestionsService {
+
     @Override
     public List<ExamQuestion> getExamQuestions() {
         ExamQuestion examQuestion1 = new ExamQuestion();
